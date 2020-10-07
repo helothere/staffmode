@@ -1,0 +1,74 @@
+freeze:
+  #messages sent to the frozen player.
+  teamspeak: "ts.example.com"
+  unfreeze-message: '&aYou have been unfrozen by a staff member.'
+
+  staff-freeze-message: '&cYou have frozen %player%.'
+  staff-unfreeze-message: '&aYou have unfrozen %player%.'
+
+  #message sent to a staff when they try to freeze another staff.
+  exempt: '&cYou cannot freeze that player.'
+
+#allow staff with the permission 'staffmode.inventory' to edit their inventory.
+#meaning they can also use the creative inventory.
+allow-inventory-use: true
+#should staff with the permission 'staffmode.interactblocks' be able
+#to break/place blocks in mod mode?
+interact-blocks-in-mod: false
+
+staff-gui:
+  item-names: '%displayname%'
+
+vanish-message: '&fYou have %toggle% &fyour &3vanish'
+mod-message: '&fYou have %toggle% &fyour &3mod mode'
+staff-chat-message: '&fYou have %toggle% &fyour &3staff chat'
+scoreboard-message: '&fYou have %toggle% &fyour &3scoreboard'
+
+#prefix for easy staff chat. example, sending '#testing' would send 'testing' in staff chat
+staffchat-prefix: '#'
+
+scoreboard:
+  title: '&b&lExample&3&lMC &7| &fHCF'
+  ip: '&7example.com'
+  main-color: 'DARK_AQUA'
+  second-color: 'AQUA'
+
+mod-mode:
+  #set slot to 0 to disable the item.
+  compass:
+    slot: 1
+    name: "&3Phase Compass"
+    lore: "&7WorldEdit's navigation tool, right click to phase."
+
+  book:
+    slot: 2
+    name: "&3Examine Player"
+    lore: "&7Right click a player to inspect their inventory."
+
+  freeze:
+    #if this item is enabled, if the player doesn't have permission to freeze
+    #the slot will be replaced with the carpet.
+    #only works if carpet is also enabled.
+    replace-with-carpet-if-no-perm: true
+    slot: 0
+    name: "&3Freeze Player"
+    lore: "&7Right click a player to freeze/unfreeze them."
+
+  carpet:
+    #if the replace-carpet is enabled and freeze item is enabled,
+    #if the player doesn't have freeze permission the carpet will be put in the slot of the freeze item.
+    slot: 3
+    name: "&3Better Looking"
+    lore: "&7Hold this so you don't see your hand."
+
+  online-staff:
+    slot: 8
+    name: "&3Online Staff"
+    lore: "&7Right click to open the Staff GUI."
+
+  vanish:
+    slot: 9
+    vanish-name: "&3Become Invisible"
+    vanish-lore: "&7Right click to toggle vanish."
+    unvanish-name: "&3Become Visible"
+    unvanish-lore: "&7Right click to toggle vanish."

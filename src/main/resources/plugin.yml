@@ -1,0 +1,59 @@
+name: StaffMode
+author: elijuh
+main: me.elijuh.staffmode.StaffMode
+version: "1.0-DEV"
+depend: [WorldEdit]
+commands:
+  mod:
+    aliases: [modmode, s, h, m, staff, staffmode]
+    description: "Toggle mod mode."
+  vanish:
+    aliases: [v]
+    description: "Toggle vanish."
+  freeze:
+    aliases: [unfreeze, ss]
+    description: "Freeze/Unfreeze a player."
+  sb:
+    aliases: [staffscoreboard, staffsb]
+    description: "Toggle the staff scoreboard."
+  stafflist:
+    aliases: [staffgui, staffonline, onlinestaff]
+    description: "Open Stafflist GUI."
+  staffreload:
+    aliases: [staffrl]
+    description: "Reload settings from config file."
+  staffchat:
+    aliases: [sc, schat]
+    description: "Toggle staff chat."
+  inspect:
+    aliases: [invsee, examine]
+    description: "Inspect a player."
+  clearchat:
+    aliases: [cc]
+    description: "Clears chat for all players."
+permissions:
+  staffmode.*:
+    description: ""
+    children:
+      staffmode.staff: true
+      staffmode.interactblocks: true
+      staffmode.exemptfreeze: true
+      staffmode.freeze: true
+      staffmode.inspect: true
+  staffmode.clearchat:
+    description: "permission to use /clearchat."
+  staffmode.inspect:
+    description: "permission to use /inspect."
+  staffmode.exemptfreeze:
+    description: "exempt a player from being frozen."
+  staffmode.freeze:
+    description: "permission to freeze with /freeze"
+  staffmode.interactblocks:
+    description: "allow staff to break blocks while unvanished"
+  staffmode.inventory:
+    description: "allow staff to edit their inventory."
+  staffmode.staff:
+    description: "main permission to use the modules."
+    children:
+      worldedit.navigation.thru.tool: true
+      worldedit.navigation.jumpto.tool: true
